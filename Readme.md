@@ -25,7 +25,7 @@ Typical temperature range (PT100):
 
 - ESP32 Dev Module
 - MAX31865 RTD Amplifier Module
-- PT100 RTD Sensor (**2-wire used in this project**)
+- PT100 RTD Sensor (**2-wire **)
 - Jumper wires
 - 3.3V Power Supply
 
@@ -41,11 +41,17 @@ Typical temperature range (PT100):
 | SDI / MOSI | GPIO 23 | SPI MOSI |
 | SDO / MISO | GPIO 19 | SPI MISO |
 | CS / SS | GPIO 5 | Chip Select |
-| RDY | Not Connected | Optional interrupt |
 
 ---
 
 ## 🌡️ RTD Sensor Connections
 
-MAX31865 RTD terminals are usually labeled as:
+MAX31865 RTD terminals are labeled as:
 
+| RTD+ F+ F− RTD− |
+
+
+⚠️ **IMPORTANT:**  
+For 2-wire sensors, you MUST add jumpers:
+| RTD+ ↔ F+ |
+| RTD− ↔ F− |
