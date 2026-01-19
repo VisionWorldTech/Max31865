@@ -22,7 +22,7 @@ void setup() {
   Serial.println("MAX31865 Test Started");
 
   // Initialize MAX31865
-  max31865.begin(MAX31865_3WIRE);  
+  max31865.begin(MAX31865_2WIRE);  
   // Change if needed:
   // MAX31865_2WIRE
   // MAX31865_3WIRE
